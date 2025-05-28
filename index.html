@@ -2,12 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Personal Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed Delivery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+ 
+    body {
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+ 
+    header {
+      background: #ff6f61;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+ 
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+ 
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+ 
+    .hero {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+ 
+    .hero img {
+      flex: 1;
+      max-width: 500px;
+      border-radius: 20px;
+      animation: floatImage 4s ease-in-out infinite;
+    }
+ 
+    @keyframes floatImage {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+ 
+    .hero-text {
+      flex: 1;
+    }
+ 
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+ 
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+ 
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+ 
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+ 
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+ 
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+ 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+ 
+    @keyframes fadeInUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+ 
+    .cta-button {
+      display: block;
+      margin: 3rem auto;
+      padding: 1rem 2.5rem;
+      background: #ff6f61;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+ 
+    .cta-button:hover {
+      background: #ff3b2e;
+    }
+ 
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Personal Page</h1>
-  <p>Hello! This is a simple webpage made with HTML.</p>
-  <p>Check out <a href="https://www.example.com" target="_blank">this link</a> for more info.</p>
+ 
+  <header>
+    <h1>Feed Delivery Service</h1>
+    <p>Fresh and Fast Delivery Right to Your Doorstep</p>
+  </header>
+ 
+  <div class="container">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Feed Delivery" />
+      <div class="hero-text">
+        <h2>Delivering Quality Feed Products</h2>
+        <p>Our reliable logistics ensure your feed gets delivered in perfect condition and on time. Quality and customer satisfaction are our top priorities.</p>
+      </div>
+    </section>
+ 
+    <section class="cards">
+      <div class="card">
+        <h3>Organic Chicken Feed</h3>
+        <p>High-quality organic grains for your poultry. Packed with nutrients and 100% chemical-free.</p>
+      </div>
+      <div class="card">
+        <h3>Dairy Cow Feed</h3>
+        <p>Boost milk production with our nutrient-rich dairy feed mix. Delivered fresh.</p>
+      </div>
+      <div class="card">
+        <h3>Sheep & Goat Pellets</h3>
+        <p>Balanced formula for improved growth and health. Easy-to-digest pellets.</p>
+      </div>
+      <div class="card">
+        <h3>Bulk Feed Delivery</h3>
+        <p>Order in large quantities and save. On-time delivery for farms and businesses.</p>
+      </div>
+    </section>
+ 
+    <button class="cta-button">Order Now</button>
+  </div>
+ 
 </body>
 </html>
