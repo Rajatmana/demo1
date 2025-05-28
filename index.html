@@ -130,6 +130,41 @@
         text-align: center;
       }
     }
+          .cta-button {
+        display: inline-block;
+        margin: 3rem auto;
+        padding: 1rem 2.5rem;
+        background: #ff6f61;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+ 
+      .cta-button:hover {
+        background: #ff3b2e;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+ 
+      @keyframes fadeInUp {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+ 
   </style>
 </head>
 <body>
@@ -167,7 +202,7 @@
       </div>
     </section>
  
-    <button class="cta-button">Order Now</button>
+    <a href="order.html" class="cta-button">Order Now</a>
   </div>
  
 </body>
